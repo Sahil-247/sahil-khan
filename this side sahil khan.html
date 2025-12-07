@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: black; color: white; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+
+    /* Layout */
+    header, footer { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    section { margin: 0; padding: 0; }
+    .card-section { background: #111; border: 1px solid #333; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); padding: 20px; margin: 20px auto; max-width: 1100px; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: black; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 999; }
+    nav ul { display: flex; justify-content: center; list-style: none; padding: 15px 0; }
+    nav li { margin: 0 15px; }
+    nav a:hover { color: #ccc; }
+
+    /* Hero */
+    .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #0f0f0f, #1a1a1a); color: #fff; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.05); animation: shimmer 3s infinite; }
+    @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+    #hero-text { font-size: 3em; font-weight: bold; border-right: 2px solid #fff; animation: blink 1s infinite; }
+    @keyframes blink { 0%, 50% { border-color: transparent; } 51%, 100% { border-color: #fff; } }
+    .download-btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #fff; color: #000; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    .download-btn:hover { background: #ccc; }
+    /* About */
+    #about h2, #training h2, #certificates h2, #industrial h2, #portfolio h2, #contact h2 { font-size: 2em; margin-bottom: 20px; }
+    #about p { max-width: 800px; margin: auto; }
+    #training ul { list-style-type: disc; margin-left: 20px; }
+
+    /* Portfolio */
+    .portfolio-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .portfolio-item { background: black; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px; transition: 0.3s; }
+    .portfolio-item:hover { transform: translateY(-5px); }
+
+    /* Contact */
+    form { display: flex; flex-direction: column; max-width: 600px; margin: auto; }
+    input, textarea { padding: 10px; margin-bottom: 15px; border: 1px solid #333; border-radius: 4px; }
+    button { padding: 10px; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #333; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: black; color: #aaa; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2em; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="card-section">
+    <section class="hero" id="hero">
+      <h1 id="hero-text"></h1>
+      <p>I'm a web Developer who loves building
+        clean,modern and user friendly websites.</p>
+      <a href="resume.pdf" download class="download-btn">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </section>
+  </div>
+
+ <!-- About Section -->
+ <div class="card-section">
+   <section id="about" style="
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      max-width:900px;
+      width:100%;
+      margin:0 auto;
+  ">
+   <h2>About Me</h2>
+
+      <!-- Image -->
+      <img src="1762488249710~2.jpg"
+           alt="Sahil Khan"
+           style="width:220px; border-radius:15px;">
+
+      <!-- Text -->
+      <div style="max-width: 500px;">
+
+          <p>
+              I am a passionate professional in the software development industry with a strong
+              background in HTML, CSS, JS & Python. I love creating impactful solutions and always
+              strive to improve and grow in my field.
+          </p>
+      </div>
+
+  </section>
+ </div>
+
+  <!-- Training Section -->
+  <div class="card-section">
+    <section id="training">
+      <h2>Training</h2>
+      <p> Successfully completed a 45-hour Professional Training Workshop on Digital Marketing & Data Analytics in July 2025, conducted by Edubuddy - The Future of School Management under the academic support of Vision Group of Institutions, Kanpur. This training enhanced my skills in marketing strategies, data-driven decision making, and applied analytics for digital platforms.</p>
+      <ul>
+        <li>Duration: 45 hours</li>
+        <li>Key skills: Digital marketing, Data analytics, Reporting</li>
+        <li>Certificate: Edubuddy (July 2025)</li>
+      </ul>
+       <!-- Image -->
+      <img src="sahil training certificate.png"
+           alt="Sahil Khan"
+           style="width:220px; border-radius:15px;">
+
+      <!-- Text -->
+      <div style="max-width: 500px;">
+
+    </section>
+  </div>
+
+  <!-- Certificates Section -->
+  <div class="card-section">
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <p><strong>Proficiency Certificate in C, Python, Web Development & Networking.</strong></p>
+      <ul>
+        <li>Certificate of Completion — </li>
+        <h9>Proficiency Certificate in C, Python, Web Development & Networking
+Certificate of Completion — Advanced BCA TechSkills Program Awarded by Vision Group of Institutions for successfully completing the Advanced BCA TechSkills Certification Program. This certificate recognizes achievement in C and Python programming, hardware and networking, web development (HTML, CSS, PHP), and soft skills for professional growth..</h9>
+      </ul>
+      <!-- Image -->
+      <img src="c:\Users\swail\Desktop\html files\WhatsApp Image 2025-11-21 at 20.39.25.jpeg"
+           alt="Certificate"
+           style="width:220px; border-radius:15px;">
+           <ul>
+           <li><strong>workshop completion certificate</strong></li>
+           <h7>Certified for completing a workshop on Python Programming, gaining skills in core Python concepts and practical coding.</h7>
+           </ul>
+            <!-- Image -->
+      <img src="c:\Users\swail\Desktop\html files\WhatsApp Image 2025-11-21 at 20.40.00.jpeg"
+           alt="Certificate"
+           style="width:220px; border-radius:15px;">
+    </section>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="card-section">
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="portfolio-items">
+        <div class="portfolio-item">
+          <img src="c:\Users\swail\Desktop\html files\Screenshot 2025-11-20 224411.png" alt="Project One" style="width: 200px;">
+          <h3>Project 1: Foodie Website</h3>
+   <p>This project is a fully designed Foodie Website built using HTML and CSS. It features different food categories, a modern homepage layout, menu items, and a contact section. The aim of this project was to practice responsive Ul design and improve frontend development skills..</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="c:\Users\swail\Desktop\html files\Screenshot 2025-11-21 214022.png" alt="Project Two" style="width: 200px;">
+          <h3>Project Two</h3>
+          <p>Created a personal portfolio website using HTML, CSS & JavaScript for presenting my skills, certificates, and projects professionally.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Contact Section -->
+  <div class="card-section">
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for collaborations or inquiries.</p>
+      <form onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required style="background: #111; color: white; border: 1px solid #555;">
+        <input type="email" id="email" placeholder="Your Email" required style="background: #111; color: white; border: 1px solid #555;">
+        <textarea id="message" rows="5" placeholder="Your Message" required style="background: #111; color: white; border: 1px solid #555;"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div style="margin-top: 20px; text-align: center;">
+        <p>Follow me on social media:</p>
+        <a href="https://www.instagram.com/shahil_khan_247?igsh=MTJzeXg1Nmh4d2JyNw==" target="_blank" style="margin: 0 10px; color: #ccc;"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.facebook.com/share/1ALo8e8pCG/" target="_blank" style="margin: 0 10px; color: #ccc;"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.linkedin.com/in/sahil-khan-473480377" target="_blank" style="margin: 0 10px; color: #ccc;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Form and Smooth Scrolling -->
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      alert("Thanks, " + name + "! Your message has been received.");
+      event.target.reset();
+    }
+
+    // Smooth Scroll
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Typing Effect for Hero Text
+    const text = "Hi I'm Sahil Khan";
+    let index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("hero-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    typeWriter();
+  </script>
+</body>
+</html>
