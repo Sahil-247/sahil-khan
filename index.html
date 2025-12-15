@@ -57,17 +57,71 @@
 <body>
 
   <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#training">Training</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #111;
+  color: #fff;
+}
 
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+  </style>
+</head>
+<body>  <div class="navbar">
+    <div class="logo">My Portfolio</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script></body>
+</html>
   <!-- Hero Section -->
   <div class="card-section">
     <section class="hero" id="hero">
