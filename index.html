@@ -57,73 +57,87 @@
 <body>
 
   <!-- Navbar -->
-  .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: #111;
-  color: #fff;
-}
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Menu</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
 
-/* Hamburger */
-.hamburger {
-  font-size: 26px;
-  cursor: pointer;
-  display: none;
-}
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #111;
+      color: #fff;
+    }
 
-/* Menu */
-.menu {
-  display: flex;
-  gap: 20px;
-}
+    /* Hamburger */
+    .hamburger {
+      font-size: 26px;
+      cursor: pointer;
+      display: none;
+    }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
+    /* Menu */
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
 
-/* Mobile view */
-@media (max-width: 768px) {
-  .hamburger { display: block; }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
 
-  .menu {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    width: 200px;
-    padding: 15px;
-    display: none;
-  }
+    /* Mobile view */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
 
-  .menu.active {
-    display: flex;
-  }
-}
+      .menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        flex-direction: column;
+        width: 200px;
+        padding: 15px;
+        display: none;
+      }
 
+      .menu.active {
+        display: flex;
+      }
+    }
   </style>
 </head>
-<body>  <div class="navbar">
+<body>
+
+  <div class="navbar">
     <div class="logo">My Portfolio</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="hero" id="Home">
+    <div class="menu" id="menu">
       <a href="#about">About</a>
-      <a href="#training">Training</a>
-      <a href="#certificates">Certificates</a>
       <a href="#projects">Projects</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
     </div>
-  </div>  <script>
+  </div>
+
+  <script>
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
-  </script></body>
+  </script>
+
+</body>
 </html>
-  <!-- Hero Section -->
+<!-- Hero Section -->
   <div class="card-section">
     <section class="hero" id="hero">
       <h1 id="hero-text"></h1>
