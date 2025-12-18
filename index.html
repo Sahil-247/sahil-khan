@@ -120,10 +120,11 @@
 
   <div class="navbar">
     <div class="logo">My Portfolio</div>
-    <div class="hamburger"id="hamburger">
+    
+    <div class="hamburger" onclick="toggleMenu()">
       ☰
-    </div>
-      <div class="nav-links"id="navLinks">
+    </div>  
+    <div class="menu"id="menu">
       <a href="#hero">Home</a>
       <a href="#about">About</a>
       <a href="#training">Training</a>
@@ -135,7 +136,7 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById('menu').classList.toggle('active');
+      document.getElementById("menu").classList.toggle("active");
     }
   </script>
 
