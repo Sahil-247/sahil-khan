@@ -56,89 +56,95 @@
 </head>
 <body>
 
-  
   <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Menu</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger Fix</title>
 
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      background: #111;
-      color: #fff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-    /* Hamburger */
-    .hamburger {
-      font-size: 26px;
-      cursor: pointer;
-      display: none;
-    }
+/* Navbar */
+.navbar {
+  background: #111;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-    /* Menu */
-    .menu {
-      display: flex;
-      gap: 20px;
-    }
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
 
-    .menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-    }
+/* Menu */
+.menu {
+  display: flex;
+  gap: 20px;
+}
 
-    /* Mobile view */
-    @media (max-width: 768px) {
-      .hamburger { display: block; }
+.menu a {
+  color: white;
+  text-decoration: none;
+}
 
-      .menu {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #111;
-        flex-direction: column;
-        width: 200px;
-        padding: 15px;
-        display: none;
-      }
+/* MOBILE */
+@media (max-width: 768px) {
 
-      .menu.active {
-        display: flex;
-      }
-    }
-  </style>
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;   /* 🔥 MAIN FIX */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="navbar">
-    <div class="logo">My Portfolio</div>
-    
-    <div class="hamburger" onclick="toggleMenu()">
-      ☰
-    </div>  
-    <div class="menu"id="menu">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#training">Training</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+<div class="navbar">
+  <div class="logo">My Portfolio</div>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("active");
-    }
-  </script>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#training">Training</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
